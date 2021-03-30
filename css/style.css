@@ -24,6 +24,7 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     padding: 12px;
+    color: #FFFFFF;
 }
 
 .topbar span{
@@ -40,12 +41,13 @@ body{
     width: 100%;
     background: #E5E5E5;
     margin-top: 131px;
+    margin-bottom: 108px;
 }
 
 .pedidoscontainer{
     align-items: center;
     height: 216px;
-    margin-top: 27px;
+    margin-top: 69px;
 }
 
 .pedidoscontainer > span{
@@ -66,6 +68,8 @@ body{
 
 .options strong{
     font-size: 16px;
+    margin: 8px 0 4px 0;
+    color: #333333;
 }
 
 .options img{
@@ -82,10 +86,39 @@ body{
 
 .valorpedido{
     font-size: 16px;
+    margin-top: 5px;
 }
 
-.pratosprincipais {
+.containeroptions {
     display: flex;
     overflow: scroll;
     margin-top: 17px;
+}
+
+.bottombar{
+    position: fixed;
+    bottom: 0;
+    height: 92px;
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desabilitado{
+    width: 87%;
+    height: 61px;
+    background: #CBCBCB;
+    border-radius: 50px;
+    padding: 0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desabilitado span{
+    color: #FFFFFF;
+    font-size: 20px;
+    text-align: center;
 }
