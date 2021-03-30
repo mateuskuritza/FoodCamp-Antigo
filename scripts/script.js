@@ -1,3 +1,4 @@
-function pratoselecionado() {
-    this.classList.toggle("selecionado");
+function pratoselecionado(element) {
+
+    element.classList.add("pratoselecionado");
 }

@@ -4,6 +4,10 @@
 
 /* font-family: 'Roboto', sans-serif; */
 
+ion-icon{
+    display: none;
+}
+
 .titletext{
     font-family: 'Righteous', cursive;
     font-weight: bold;
@@ -130,11 +134,15 @@ body{
     text-align: center;
 }
 
-.selecionado{
+.pratoselecionado, .bebidaselecionada, .sobremesaselecionada{
     border: 5px solid #32B72F;
 }
 
-.imagemselecionado{
-    border-radius: 50%;
-    hei
+.pratoselecionado ion-icon, .bebidaselecionada ion-icon, .sobremesaselecionada ion-icon{
+    display: inherit;
+}
+
+ion-icon {
+    width: 15.44px;
+    color: green;
 }
