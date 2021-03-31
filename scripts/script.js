@@ -10,6 +10,10 @@ function prato_selecionado(element) {
 
     const valorpedido = element.getElementsByClassName("valor-pedido");
     valor_prato = Number(valorpedido[0].innerHTML.replace("R$ ", ''));
+
+    pratopedido = element.getElementsByClassName("nome-pedido");
+    pratopedido = pratopedido[0].innerHTML;
+
     testarselecao();
 }
 
@@ -24,6 +28,10 @@ function bebida_selecionada(element) {
 
     const valorpedido = element.getElementsByClassName("valor-pedido");
     valor_bebida = Number(valorpedido[0].innerHTML.replace("R$ ", ''));
+
+    bebidapedido = element.getElementsByClassName("nome-pedido");
+    bebidapedido = bebidapedido[0].innerHTML;
+
     testarselecao();
 }
 
@@ -38,6 +46,10 @@ function sobremesa_selecionada(element) {
 
     const valorpedido = element.getElementsByClassName("valor-pedido");
     valor_sobremesa = Number(valorpedido[0].innerHTML.replace("R$ ", ''));
+
+    sobremesapedido = element.getElementsByClassName("nome-pedido");
+    sobremesapedido = sobremesapedido[0].innerHTML;
+
     testarselecao();
 }
 
