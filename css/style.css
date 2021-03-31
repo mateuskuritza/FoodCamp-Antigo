@@ -8,7 +8,7 @@ ion-icon{
     display: none;
 }
 
-.titletext{
+.texto-titulo{
     font-family: 'Righteous', cursive;
     font-weight: bold;
 }
@@ -18,7 +18,7 @@ body{
     background: #E5E5E5;
 }
 
-.topbar {
+.barra-topo {
     width: 100%;
     height: 92px;
     background: #cf2b2b;
@@ -32,15 +32,15 @@ body{
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.topbar span{
+.barra-topo span{
     font-size: 44px;
 }
 
-.topbar p{
+.barra-topo p{
     font-size: 17px;
 }
 
-.pedidos{
+.todos-pedidos{
     padding-left: 19px;
     margin-top: 92px;
     width: 100%;
@@ -49,18 +49,18 @@ body{
     margin-bottom: 108px;
 }
 
-.pedidoscontainer{
+.pedidos-container{
     align-items: center;
     height: 216px;
     margin-top: 69px;
 }
 
-.pedidoscontainer > span{
+.pedidos-container > span{
     font-size: 26px;
     color: #333333;
 }
 
-.options{
+.opcoes{
     padding: 18px 14px 13px 14px;
     display: flex;
     flex-direction: column;
@@ -71,19 +71,19 @@ body{
     margin: 0 16px 0 0;
 }
 
-.options div{
+.opcoes div{
     display:flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.options strong{
+.opcoes strong{
     font-size: 16px;
     margin: 8px 0 4px 0;
     color: #333333;
 }
 
-.options img{
+.opcoes img{
     width: 144px;
     height: 87px;
     object-fit: cover;
@@ -100,13 +100,13 @@ body{
     margin-top: 5px;
 }
 
-.containeroptions {
+.pratos-principais, .bebidas, .sobremesas {
     display: flex;
     overflow: scroll;
     margin-top: 17px;
 }
 
-.bottombar{
+.barra-inferior{
     position: fixed;
     bottom: 0;
     height: 92px;
@@ -117,7 +117,7 @@ body{
     align-items: center;
 }
 
-.desabilitado{
+.botao-desabilitado{
     width: 87%;
     height: 61px;
     background: #CBCBCB;
@@ -128,17 +128,17 @@ body{
     align-items: center;
 }
 
-.desabilitado span{
+.botao-desabilitado span{
     color: #FFFFFF;
     font-size: 20px;
     text-align: center;
 }
 
-.pratoselecionado, .bebidaselecionada, .sobremesaselecionada{
+.selecionado{
     border: 5px solid #32B72F;
 }
 
-.pratoselecionado ion-icon, .bebidaselecionada ion-icon, .sobremesaselecionada ion-icon{
+.selecionado ion-icon{
     display: inherit;
 }
 
