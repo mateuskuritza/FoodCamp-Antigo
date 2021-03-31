@@ -54,21 +54,25 @@ function sobremesa_selecionada(element) {
 }
 
 function calcular_total(){
-
-    total = valor_prato + valor_bebida + valor_sobremesa;
-    console.log(total);
-    
+    total = valor_prato + valor_bebida + valor_sobremesa;    
 }
 
-
 function testarselecao(){
-
     if(valor_prato*valor_bebida*valor_sobremesa!=0){
         const botaohabilitado = document.getElementById("botao-habilitado");
         const botaodesabilitado = document.getElementById("botao-desabilitado");
         botaohabilitado.style.display = "inherit";
         botaodesabilitado.style.display = "none";
+        calcular_total();
     }
 }
 
+function mensagemwhats(){
+    pratopedido
+    bebidapedido
+    sobremesapedido
+    total
 
+    const mensagem = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido: - Prato: " + pratopedido + " - Bebida: " + bebidapedido + " - Sobremesa: " + sobremesapedido + " Total: R$ " + total);
+    window.location.href = mensagem;
+}
