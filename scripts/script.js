@@ -54,7 +54,7 @@ function sobremesa_selecionada(element) {
 }
 
 function calcular_total(){
-    total = valor_prato + valor_bebida + valor_sobremesa;    
+    total = (valor_prato + valor_bebida + valor_sobremesa).toFixed(2);    
 }
 
 function testarselecao(){
@@ -68,6 +68,6 @@ function testarselecao(){
 }
 
 function mensagemwhats(){
-    const mensagem = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido: - Prato: " + pratopedido + " - Bebida: " + bebidapedido + " - Sobremesa: " + sobremesapedido + " Total: R$ " + total);
-    window.open(mensagem);
+    const linkwhats = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido: - Prato: " + pratopedido + " - Bebida: " + bebidapedido + " - Sobremesa: " + sobremesapedido + " Total: R$ " + total);
+    window.open(linkwhats);
 }
