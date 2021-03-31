@@ -70,7 +70,7 @@ function testarselecao(){
 function mensagemWhats(){
     const nomeCliente = prompt("Qual seu nome?");
     const enderecoCliente = prompt("Qual seu endereço?")
-    const linkWhats = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido: - Prato: " + pratoPedido + " - Bebida: " + bebidaPedido + " - Sobremesa: " + sobremesaPedido + " Total: R$ " + total + " Nome: " + nomeCliente + " Endereço: " + enderecoCliente);
+    const linkWhats = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido:\n-Prato: " + pratoPedido + "\n-Bebida: " + bebidaPedido + "\n-Sobremesa: " + sobremesaPedido + "\n*Total:* R$" + total + "\n*Nome:* " + nomeCliente + "\n*Endereço:* " + enderecoCliente);
     window.open(linkWhats);
 }
 
