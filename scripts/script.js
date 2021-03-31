@@ -50,10 +50,12 @@ function calcular_total(){
 
 
 function testarselecao(){
+
     if(valor_prato*valor_bebida*valor_sobremesa!=0){
-        const botao = document.getElementById("botao-desabilitado");
-    
-        botao.classList.add("testebackground")
+        const botaohabilitado = document.getElementById("botao-habilitado");
+        const botaodesabilitado = document.getElementById("botao-desabilitado");
+        botaohabilitado.style.display = "inherit";
+        botaodesabilitado.style.display = "none";
     }
 }
 

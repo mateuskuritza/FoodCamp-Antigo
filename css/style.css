@@ -119,7 +119,7 @@ body{
     align-items: center;
 }
 
-.botao-desabilitado{
+#botao-desabilitado{
     width: 87%;
     height: 61px;
     background: #CBCBCB;
@@ -130,7 +130,7 @@ body{
     align-items: center;
 }
 
-.botao-desabilitado span{
+#botao-desabilitado span{
     color: #FFFFFF;
     font-size: 20px;
     text-align: center;
@@ -144,6 +144,21 @@ body{
     display: inherit;
 }
 
-.testebackground{
-    background: green;
+#botao-habilitado{
+    width: 87%;
+    height: 61px;
+    background: #32B72F;
+    border-radius: 50px;
+    padding: 0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#botao-habilitado span{
+    color: #FFFFFF;
+    font-size: 20px;
+    text-align: center;
+    font-style: bold;
+}
+
