@@ -89,13 +89,13 @@ body{
     object-fit: cover;
 }
 
-.descricaopedido{
+.descricao-pedido{
     font-size: 15px;
     color: #A6A6A6;
     font-weight: 300;
 }
 
-.valorpedido{
+.valor-pedido{
     font-size: 16px;
     margin-top: 5px;
 }
