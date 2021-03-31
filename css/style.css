@@ -6,6 +6,8 @@
 
 ion-icon{
     display: none;
+    width: 15.44px;
+    color: green;
 }
 
 .texto-titulo{
@@ -134,15 +136,11 @@ body{
     text-align: center;
 }
 
-.selecionado{
+.prato-selecionado, .bebida-selecionada, .sobremesa-selecionada{
     border: 5px solid #32B72F;
 }
 
-.selecionado ion-icon{
+.prato-selecionado ion-icon, .bebida-selecionada ion-icon, .sobremesa-selecionada ion-icon{
     display: inherit;
 }
 
-ion-icon {
-    width: 15.44px;
-    color: green;
-}
