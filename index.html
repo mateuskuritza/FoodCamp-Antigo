@@ -139,9 +139,38 @@
     <div class="barra-inferior">
 
         <div id="botao-desabilitado"><span>Selecione os 3 itens para fechar o pedido</span></div>
-        <div onclick="mensagemwhats()" id="botao-habilitado" style="display:none" ><span>Fechar pedido!</span></div>
+        <div id="botao-habilitado" style="display:none" onclick="confirmarPedido()"><span>Fechar pedido!</span></div>
 
     </div>
+
+
+    <div class="confirmar-fundo confirmar none"></div>
+
+    <div class="confirmar-menu confirmar none">
+
+        <strong>Confirme seu pedido</strong>
+
+        <div class="confirmaritem">
+            <span class="confirmar-prato"></span>
+            <span class="confirmar-prato-valor"></span>
+        </div>
+
+        <div class="confirmaritem">
+            <span class="confirmar-bebida"></span>
+            <span class="confirmar-bebida-valor"></span>
+        </div>
+
+        <div class="confirmaritem">
+            <span class="confirmar-sobremesa"></span>
+            <span class="confirmar-sobremesa-valor"></span>
+        </div>
+
+        <button type="submit" onclick="mensagemwhats()"> Tudo certo, pode pedir! </button>
+        <button type="submit"> Cancelar </button>
+
+    </div>
+
+    
 
     <script src="scripts/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

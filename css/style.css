@@ -32,6 +32,7 @@ body{
     padding: 12px;
     color: #FFFFFF;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 3;
 }
 
 .barra-topo span{
@@ -162,3 +163,28 @@ body{
     font-style: bold;
 }
 
+.confirmar-menu{
+    background: #50D074;
+    color: #FFFFFF;
+    border-radius: 9px;
+    position: fixed;
+    width: 90%;
+    height: 36%;
+    left: 5%;
+    top: 32%;
+    z-index: 4;
+}
+
+.confirmar-fundo{
+    background: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    top: 0;
+    opacity: 0.8;
+}
+
+.none{
+    display: none;
+}

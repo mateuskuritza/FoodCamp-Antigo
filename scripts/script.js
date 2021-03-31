@@ -8,11 +8,11 @@ function prato_selecionado(element) {
 
     element.classList.add("prato-selecionado");
 
-    const valorpedido = element.querySelector(".valor-pedido");
-    valor_prato = Number(valorpedido.innerHTML.replace("R$ ", ''));
+    const valorPedido = element.querySelector(".valor-pedido");
+    valor_prato = Number(valorPedido.innerHTML.replace("R$ ", ''));
 
-    pratopedido = element.querySelector(".nome-pedido");
-    pratopedido = pratopedido.innerHTML;
+    pratoPedido = element.querySelector(".nome-pedido");
+    pratoPedido = pratoPedido.innerHTML;
 
     testarselecao();
 }
@@ -26,11 +26,11 @@ function bebida_selecionada(element) {
     
     element.classList.add("bebida-selecionada");
 
-    const valorpedido = element.querySelector(".valor-pedido");
-    valor_bebida = Number(valorpedido.innerHTML.replace("R$ ", ''));
+    const valorPedido = element.querySelector(".valor-pedido");
+    valor_bebida = Number(valorPedido.innerHTML.replace("R$ ", ''));
 
-    bebidapedido = element.querySelector(".nome-pedido");
-    bebidapedido = bebidapedido.innerHTML;
+    bebidaPedido = element.querySelector(".nome-pedido");
+    bebidaPedido = bebidaPedido.innerHTML;
 
     testarselecao();
 }
@@ -44,11 +44,11 @@ function sobremesa_selecionada(element) {
     
     element.classList.add("sobremesa-selecionada");
 
-    const valorpedido = element.querySelector(".valor-pedido");
-    valor_sobremesa = Number(valorpedido.innerHTML.replace("R$ ", ''));
+    const valorPedido = element.querySelector(".valor-pedido");
+    valor_sobremesa = Number(valorPedido.innerHTML.replace("R$ ", ''));
 
-    sobremesapedido = element.querySelector(".nome-pedido");
-    sobremesapedido = sobremesapedido.innerHTML;
+    sobremesaPedido = element.querySelector(".nome-pedido");
+    sobremesaPedido = sobremesaPedido.innerHTML;
 
     testarselecao();
 }
@@ -59,15 +59,24 @@ function calcular_total(){
 
 function testarselecao(){
     if(valor_prato*valor_bebida*valor_sobremesa!=0){
-        const botaohabilitado = document.querySelector("#botao-habilitado");
-        const botaodesabilitado = document.querySelector("#botao-desabilitado");
-        botaohabilitado.style.display = "inherit";
-        botaodesabilitado.style.display = "none";
+        const botaoHabilitado = document.querySelector("#botao-habilitado");
+        const botaoDesabilitado = document.querySelector("#botao-desabilitado");
+        botaoHabilitado.style.display = "inherit";
+        botaoDesabilitado.style.display = "none";
         calcular_total();
     }
 }
 
 function mensagemwhats(){
-    const linkwhats = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido: - Prato: " + pratopedido + " - Bebida: " + bebidapedido + " - Sobremesa: " + sobremesapedido + " Total: R$ " + total);
-    window.open(linkwhats);
+    const nomeCliente = prompt("Qual seu nome?");
+    const enderecoCliente = prompt("Qual seu endereço?")
+    const linkWhats = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido: - Prato: " + pratoPedido + " - Bebida: " + bebidaPedido + " - Sobremesa: " + sobremesaPedido + " Total: R$ " + total + " Nome: " + nomeCliente + " Endereço: " + enderecoCliente);
+    window.open(linkWhats);
+}
+
+function confirmarPedido(){
+
+    const caixa = document.querySelectorAll(".confirmar");
+    caixa[0].classList.toggle("none");
+    caixa[1].classList.toggle("none");
 }
