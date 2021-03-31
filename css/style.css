@@ -10,6 +10,10 @@ ion-icon{
     color: green;
 }
 
+.button{
+
+}
+
 .texto-titulo{
     font-family: 'Righteous', cursive;
     font-weight: bold;
@@ -173,6 +177,26 @@ body{
     left: 5%;
     top: 32%;
     z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px;
+}
+
+.confirmar-menu > *{
+    width: 100%;
+    margin-bottom: 13px;
+}
+
+.confirmar-menu strong:first-of-type{
+    text-align: center;
+}
+
+.confirmar-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .confirmar-fundo{
@@ -188,3 +212,25 @@ body{
 .none{
     display: none;
 }
+
+#botao-confirmar, #botao-cancelar{
+    height: 52px;
+    font-style: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#botao-confirmar{
+    background: #FFFFFF;
+    color: #50D074;
+    font-size: 22px;
+    border-radius: 100px;
+}
+
+#botao-cancelar{
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+

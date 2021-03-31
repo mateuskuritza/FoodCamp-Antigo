@@ -67,7 +67,7 @@ function testarselecao(){
     }
 }
 
-function mensagemwhats(){
+function mensagemWhats(){
     const nomeCliente = prompt("Qual seu nome?");
     const enderecoCliente = prompt("Qual seu endereço?")
     const linkWhats = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido: - Prato: " + pratoPedido + " - Bebida: " + bebidaPedido + " - Sobremesa: " + sobremesaPedido + " Total: R$ " + total + " Nome: " + nomeCliente + " Endereço: " + enderecoCliente);
@@ -79,4 +79,18 @@ function confirmarPedido(){
     const caixa = document.querySelectorAll(".confirmar");
     caixa[0].classList.toggle("none");
     caixa[1].classList.toggle("none");
+}
+
+function inserirValores(){
+
+    document.querySelector(".confirmar-prato").innerHTML = pratoPedido;
+    document.querySelector(".confirmar-prato-valor").innerHTML ="R$ " + valor_prato;
+
+    document.querySelector(".confirmar-bebida").innerHTML = bebidaPedido;
+    document.querySelector(".confirmar-bebida-valor").innerHTML ="R$ " + valor_bebida;
+
+    document.querySelector(".confirmar-sobremesa").innerHTML = sobremesaPedido;
+    document.querySelector(".confirmar-sobremesa-valor").innerHTML ="R$ " + valor_sobremesa;
+
+    document.querySelector(".confirmar-total").innerHTML = "R$ " + total;
 }

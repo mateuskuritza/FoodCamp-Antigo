@@ -139,7 +139,7 @@
     <div class="barra-inferior">
 
         <div id="botao-desabilitado"><span>Selecione os 3 itens para fechar o pedido</span></div>
-        <div id="botao-habilitado" style="display:none" onclick="confirmarPedido()"><span>Fechar pedido!</span></div>
+        <div id="botao-habilitado" style="display:none" onclick="confirmarPedido();inserirValores();"><span>Fechar pedido!</span></div>
 
     </div>
 
@@ -150,23 +150,28 @@
 
         <strong>Confirme seu pedido</strong>
 
-        <div class="confirmaritem">
+        <div class="confirmar-item">
             <span class="confirmar-prato"></span>
             <span class="confirmar-prato-valor"></span>
         </div>
 
-        <div class="confirmaritem">
+        <div class="confirmar-item">
             <span class="confirmar-bebida"></span>
             <span class="confirmar-bebida-valor"></span>
         </div>
 
-        <div class="confirmaritem">
+        <div class="confirmar-item">
             <span class="confirmar-sobremesa"></span>
             <span class="confirmar-sobremesa-valor"></span>
         </div>
 
-        <button type="submit" onclick="mensagemwhats()"> Tudo certo, pode pedir! </button>
-        <button type="submit"> Cancelar </button>
+        <div>
+           <strong>TOTAL</strong>
+           <span class="confirmar-total"></span>
+        </div>
+
+        <div id="botao-confirmar" onclick="mensagemWhats()"> <strong>Tudo certo, pode pedir!</strong> </div>
+        <div id="botao-cancelar" onclick="confirmarPedido()"> <strong>Cancelar</strong> </div>
 
     </div>
 
