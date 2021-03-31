@@ -10,6 +10,7 @@ function prato_selecionado(element) {
 
     const valorpedido = element.getElementsByClassName("valor-pedido");
     valor_prato = Number(valorpedido[0].innerHTML.replace("R$ ", ''));
+    testarselecao();
 }
 
 function bebida_selecionada(element) {
@@ -23,6 +24,7 @@ function bebida_selecionada(element) {
 
     const valorpedido = element.getElementsByClassName("valor-pedido");
     valor_bebida = Number(valorpedido[0].innerHTML.replace("R$ ", ''));
+    testarselecao();
 }
 
 function sobremesa_selecionada(element) {
@@ -36,6 +38,7 @@ function sobremesa_selecionada(element) {
 
     const valorpedido = element.getElementsByClassName("valor-pedido");
     valor_sobremesa = Number(valorpedido[0].innerHTML.replace("R$ ", ''));
+    testarselecao();
 }
 
 function calcular_total(){
@@ -44,3 +47,14 @@ function calcular_total(){
     console.log(total);
     
 }
+
+
+function testarselecao(){
+    if(valor_prato*valor_bebida*valor_sobremesa!=0){
+        const botao = document.getElementById("botao-desabilitado");
+    
+        botao.classList.add("testebackground")
+    }
+}
+
+
