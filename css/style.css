@@ -171,7 +171,6 @@ body{
     border-radius: 9px;
     position: fixed;
     width: 90%;
-    height: 36%;
     left: 5%;
     top: 32%;
     z-index: 4;
@@ -230,6 +229,7 @@ body{
 #botao-cancelar{
     color: #FFFFFF;
     font-size: 20px;
+    margin-bottom: 0;
 }
 
 .opcoes, #botao-cancelar, #botao-confirmar, #botao-habilitado{
