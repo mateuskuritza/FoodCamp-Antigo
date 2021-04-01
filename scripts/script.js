@@ -1,64 +1,32 @@
+function pedidoSelecionado(element){
 
-function prato_selecionado(element) {
-    const selecionados = document.querySelector(".prato-selecionado");
+    const pai = element.parentNode.classList.value;
+    const selecionados = document.querySelector("." + pai + " .selecionado");
     
     if( selecionados !== null ){
-        selecionados.classList.remove("prato-selecionado");
+        selecionados.classList.remove("selecionado");
     }
 
-    element.classList.add("prato-selecionado");
+    element.classList.add("selecionado");
 
-    const valorPedido = element.querySelector(".valor-pedido");
-    valor_prato = Number(valorPedido.innerHTML.replace("R$ ", ''));
-
-    pratoPedido = element.querySelector(".nome-pedido");
-    pratoPedido = pratoPedido.innerHTML;
-
-    testarselecao();
+    testarSelecao();
 }
 
-function bebida_selecionada(element) {
-    const selecionados = document.querySelector(".bebida-selecionada");
+function testarSelecao(){
 
-    if( selecionados !== null ){
-        selecionados.classList.remove("bebida-selecionada");
-    }
+    valores = [];
+    pratosPedidos = [];
+    const opcoes = [".pratos-principais", ".bebidas", ".sobremesas"];
+
+    for(let i=0; i<opcoes.length;i++){
+        valores[i] = document.querySelector(opcoes[i] + " .selecionado .valor-pedido");
+        valores[i] = Number(valores[i].innerHTML.replace("R$ ", '')).toFixed(2);
     
-    element.classList.add("bebida-selecionada");
-
-    const valorPedido = element.querySelector(".valor-pedido");
-    valor_bebida = Number(valorPedido.innerHTML.replace("R$ ", ''));
-
-    bebidaPedido = element.querySelector(".nome-pedido");
-    bebidaPedido = bebidaPedido.innerHTML;
-
-    testarselecao();
-}
-
-function sobremesa_selecionada(element) {
-    const selecionados = document.querySelector(".sobremesa-selecionada");
-
-    if( selecionados !== null ){
-        selecionados.classList.remove("sobremesa-selecionada");
+        pratosPedidos[i] = document.querySelector(opcoes[i] + " .selecionado .nome-pedido");
+        pratosPedidos[i] = pratosPedidos[i].innerHTML;
     }
-    
-    element.classList.add("sobremesa-selecionada");
 
-    const valorPedido = element.querySelector(".valor-pedido");
-    valor_sobremesa = Number(valorPedido.innerHTML.replace("R$ ", ''));
-
-    sobremesaPedido = element.querySelector(".nome-pedido");
-    sobremesaPedido = sobremesaPedido.innerHTML;
-
-    testarselecao();
-}
-
-function calcular_total(){
-    total = (valor_prato + valor_bebida + valor_sobremesa).toFixed(2);    
-}
-
-function testarselecao(){
-    if(valor_prato*valor_bebida*valor_sobremesa!=0){
+    if(valores[0]*valores[1]*valores[2] !== 0){
         const botaoHabilitado = document.querySelector("#botao-habilitado");
         const botaoDesabilitado = document.querySelector("#botao-desabilitado");
         botaoHabilitado.style.display = "inherit";
@@ -67,10 +35,14 @@ function testarselecao(){
     }
 }
 
+function calcular_total(){
+    total = (valores[0]*valores[1]*valores[2]).toFixed(2);    
+}
+
 function mensagemWhats(){
     const nomeCliente = prompt("Qual seu nome?");
     const enderecoCliente = prompt("Qual seu endereço?")
-    const linkWhats = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido:\n-Prato: " + pratoPedido + "\n-Bebida: " + bebidaPedido + "\n-Sobremesa: " + sobremesaPedido + "\n*Total:* R$" + total + "\n*Nome:* " + nomeCliente + "\n*Endereço:* " + enderecoCliente);
+    const linkWhats = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido:\n-Prato: " + pratosPedidos[0] + "\n-Bebida: " + pratosPedidos[1] + "\n-Sobremesa: " + pratosPedidos[2] + "\n*Total:* R$" + total + "\n*Nome:* " + nomeCliente + "\n*Endereço:* " + enderecoCliente);
     window.open(linkWhats);
 }
 
@@ -83,14 +55,14 @@ function confirmarPedido(){
 
 function inserirValores(){
 
-    document.querySelector(".confirmar-prato").innerHTML = pratoPedido;
-    document.querySelector(".confirmar-prato-valor").innerHTML ="R$ " + valor_prato;
+    document.querySelector(".confirmar-prato").innerHTML = pratosPedidos[0];
+    document.querySelector(".confirmar-prato-valor").innerHTML ="R$ " + valores[0];
 
-    document.querySelector(".confirmar-bebida").innerHTML = bebidaPedido;
-    document.querySelector(".confirmar-bebida-valor").innerHTML ="R$ " + valor_bebida;
+    document.querySelector(".confirmar-bebida").innerHTML = pratosPedidos[1];
+    document.querySelector(".confirmar-bebida-valor").innerHTML ="R$ " + valores[1];
 
-    document.querySelector(".confirmar-sobremesa").innerHTML = sobremesaPedido;
-    document.querySelector(".confirmar-sobremesa-valor").innerHTML ="R$ " + valor_sobremesa;
+    document.querySelector(".confirmar-sobremesa").innerHTML = pratosPedidos[2];
+    document.querySelector(".confirmar-sobremesa-valor").innerHTML ="R$ " + valores[2];
 
     document.querySelector(".confirmar-total").innerHTML = "R$ " + total;
 }
