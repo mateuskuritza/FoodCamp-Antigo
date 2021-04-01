@@ -228,7 +228,6 @@ body{
 #botao-cancelar{
     color: #FFFFFF;
     font-size: 20px;
-    background: red;
 }
 
 .opcoes, #botao-cancelar, #botao-confirmar, #botao-habilitado{
