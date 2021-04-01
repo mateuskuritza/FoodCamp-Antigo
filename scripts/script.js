@@ -20,7 +20,7 @@ function testarSelecao(){
 
     for(let i=0; i<opcoes.length;i++){
         valores[i] = document.querySelector(opcoes[i] + " .selecionado .valor-pedido");
-        valores[i] = Number(valores[i].innerHTML.replace("R$ ", '')).toFixed(2);
+        valores[i] = Number(valores[i].innerHTML.replace("R$ ", ''));
     
         pratosPedidos[i] = document.querySelector(opcoes[i] + " .selecionado .nome-pedido");
         pratosPedidos[i] = pratosPedidos[i].innerHTML;
@@ -36,7 +36,7 @@ function testarSelecao(){
 }
 
 function calcular_total(){
-    total = (valores[0]*valores[1]*valores[2]).toFixed(2);    
+    total = (valores[0]+valores[1]+valores[2]).toFixed(2);   
 }
 
 function mensagemWhats(){
