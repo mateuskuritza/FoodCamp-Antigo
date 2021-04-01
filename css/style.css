@@ -45,11 +45,13 @@ body{
 
 .todos-pedidos{
     padding-left: 19px;
-    margin-top: 92px;
     width: 100%;
     background: #E5E5E5;
-    margin-top: 131px;
+    margin-top: 48px;
     margin-bottom: 118px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .pedidos-container{
