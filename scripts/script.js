@@ -9,10 +9,12 @@ function pedidoSelecionado(element){
 
     element.classList.add("selecionado");
 
-    testarSelecao();
+    if(document.querySelectorAll(".selecionado").length == 3){
+        obterValores();
+    }
 }
 
-function testarSelecao(){
+function obterValores(){
 
     valores = [];
     pratosPedidos = [];
@@ -25,14 +27,16 @@ function testarSelecao(){
         pratosPedidos[i] = document.querySelector(opcoes[i] + " .selecionado .nome-pedido");
         pratosPedidos[i] = pratosPedidos[i].innerHTML;
     }
+    
+    habilitarConfirmar();
+}
 
-    if(valores[0]*valores[1]*valores[2] !== 0){
-        const botaoHabilitado = document.querySelector("#botao-habilitado");
-        const botaoDesabilitado = document.querySelector("#botao-desabilitado");
-        botaoHabilitado.style.display = "inherit";
-        botaoDesabilitado.style.display = "none";
-        calcular_total();
-    }
+function habilitarConfirmar(){
+
+    const botaoHabilitado = document.querySelector("#botao-habilitado");
+    const botaoDesabilitado = document.querySelector("#botao-desabilitado");
+    botaoHabilitado.style.display = "inherit";
+    botaoDesabilitado.style.display = "none";
 }
 
 function calcular_total(){
@@ -43,7 +47,7 @@ function mensagemWhats(){
     const nomeCliente = prompt("Qual seu nome?");
     const enderecoCliente = prompt("Qual seu endereço?");
 
-    if( nomeCliente.length!==0 && enderecoCliente.length!==0){
+    if(nomeCliente.length!=0 && enderecoCliente.length!=0){
         const linkWhats = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido:\n-Prato: " + pratosPedidos[0] + "\n-Bebida: " + pratosPedidos[1] + "\n-Sobremesa: " + pratosPedidos[2] + "\n*Total:* R$" + total + "\n*Nome:* " + nomeCliente + "\n*Endereço:* " + enderecoCliente);
         window.open(linkWhats);
     } else {
@@ -52,14 +56,15 @@ function mensagemWhats(){
 
 }
 
-function confirmarPedido(){
-
+function menuConfirmar(){
     const caixa = document.querySelectorAll(".confirmar");
     caixa[0].classList.toggle("none");
     caixa[1].classList.toggle("none");
 }
 
 function inserirValores(){
+
+    calcular_total();
 
     document.querySelector(".confirmar-prato").innerHTML = pratosPedidos[0];
     document.querySelector(".confirmar-prato-valor").innerHTML ="R$ " + valores[0];
