@@ -1,13 +1,22 @@
 function pedidoSelecionado(element){
 
+    let remover = "no";
     const pai = element.parentNode.classList.value;
     const selecionados = document.querySelector("." + pai + " .selecionado");
     
+    if(element.classList.value == "opcoes selecionado"){
+        element.classList.remove("selecionado");
+        remover = "yes";
+    };
+
     if( selecionados !== null ){
         selecionados.classList.remove("selecionado");
     }
 
-    element.classList.add("selecionado");
+    if(remover == "no"){
+        element.classList.add("selecionado");
+    }
+    
 
     if(document.querySelectorAll(".selecionado").length == 3){
         obterValores();

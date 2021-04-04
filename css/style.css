@@ -212,10 +212,18 @@ body{
 
 #botao-confirmar, #botao-cancelar{
     height: 52px;
+    width: 95%;
     font-style: bold;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#botao-cancelar:hover, #botao-confirmar:hover{
+    transition: 200ms;
+    transform: scale(1.05);
+    filter: brightness(0.9);
+
 }
 
 #botao-confirmar{
