@@ -4,24 +4,30 @@ function pedidoSelecionado(element){
     const pai = element.parentNode.classList.value;
     const selecionados = document.querySelector("." + pai + " .selecionado");
     
+    // remover selecionado
     if(element.classList.value == "opcoes selecionado"){
         element.classList.remove("selecionado");
         remover = "yes";
     };
 
+    // apenas 1 selecionado ao mesmo tempo
     if( selecionados !== null ){
         selecionados.classList.remove("selecionado");
     }
 
+    // adicionar estilo de selecionado
     if(remover == "no"){
         element.classList.add("selecionado");
     }
     
 
+    //ativar botao inferior e obter valores com 3 opcoes selecionadas
     if(document.querySelectorAll(".selecionado").length == 3){
         obterValores();
+        habilitarConfirmar();
     }
 }
+
 
 function obterValores(){
 
@@ -36,8 +42,6 @@ function obterValores(){
         pratosPedidos[i] = document.querySelector(opcoes[i] + " .selecionado .nome-pedido");
         pratosPedidos[i] = pratosPedidos[i].innerHTML;
     }
-    
-    habilitarConfirmar();
 }
 
 function habilitarConfirmar(){
@@ -73,8 +77,6 @@ function menuConfirmar(){
 
 function inserirValores(){
 
-    calcular_total();
-
     document.querySelector(".confirmar-prato").innerHTML = pratosPedidos[0];
     document.querySelector(".confirmar-prato-valor").innerHTML ="R$ " + valores[0];
 
@@ -84,5 +86,6 @@ function inserirValores(){
     document.querySelector(".confirmar-sobremesa").innerHTML = pratosPedidos[2];
     document.querySelector(".confirmar-sobremesa-valor").innerHTML ="R$ " + valores[2];
 
+    calcular_total();
     document.querySelector(".confirmar-total").innerHTML = "R$ " + total;
 }
