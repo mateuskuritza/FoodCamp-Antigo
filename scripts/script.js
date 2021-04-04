@@ -1,13 +1,14 @@
 function pedidoSelecionado(element){
 
     let remover = "no";
-    const pai = element.parentNode.classList.value;
-    const selecionados = document.querySelector("." + pai + " .selecionado");
-    
+    const containerSelecionados = element.parentNode.classList.value;
+    const selecionados = document.querySelector("." + containerSelecionados + " .selecionado");
+  
     // remover selecionado
     if(element.classList.value == "opcoes selecionado"){
         element.classList.remove("selecionado");
         remover = "yes";
+        desabilitarConfirmar();
     };
 
     // apenas 1 selecionado ao mesmo tempo
@@ -15,11 +16,12 @@ function pedidoSelecionado(element){
         selecionados.classList.remove("selecionado");
     }
 
+
     // adicionar estilo de selecionado
     if(remover == "no"){
         element.classList.add("selecionado");
     }
-    
+
 
     //ativar botao inferior e obter valores com 3 opcoes selecionadas
     if(document.querySelectorAll(".selecionado").length == 3){
@@ -46,10 +48,15 @@ function obterValores(){
 
 function habilitarConfirmar(){
 
-    const botaoHabilitado = document.querySelector("#botao-habilitado");
-    const botaoDesabilitado = document.querySelector("#botao-desabilitado");
-    botaoHabilitado.style.display = "inherit";
-    botaoDesabilitado.style.display = "none";
+    botaoHabilitado = document.querySelector(".botao-habilitado");
+    botaoDesabilitado = document.querySelector(".botao-desabilitado");
+    botaoHabilitado.classList.remove("none");
+    botaoDesabilitado.classList.add("none");
+}
+
+function desabilitarConfirmar(){
+    botaoHabilitado.classList.add("none");
+    botaoDesabilitado.classList.remove("none");
 }
 
 function calcular_total(){
