@@ -30,7 +30,6 @@ function pedidoSelecionado(element){
     }
 }
 
-
 function obterValores(){
 
     valores = [];
@@ -85,13 +84,13 @@ function menuConfirmar(){
 function inserirValores(){
 
     document.querySelector(".confirmar-prato").innerHTML = pratosPedidos[0];
-    document.querySelector(".confirmar-prato-valor").innerHTML ="R$ " + valores[0];
+    document.querySelector(".confirmar-prato-valor").innerHTML ="R$ " + valores[0].toFixed(2);
 
     document.querySelector(".confirmar-bebida").innerHTML = pratosPedidos[1];
-    document.querySelector(".confirmar-bebida-valor").innerHTML ="R$ " + valores[1];
+    document.querySelector(".confirmar-bebida-valor").innerHTML ="R$ " + valores[1].toFixed(2);
 
     document.querySelector(".confirmar-sobremesa").innerHTML = pratosPedidos[2];
-    document.querySelector(".confirmar-sobremesa-valor").innerHTML ="R$ " + valores[2];
+    document.querySelector(".confirmar-sobremesa-valor").innerHTML ="R$ " + valores[2].toFixed(2);
 
     calcular_total();
     document.querySelector(".confirmar-total").innerHTML = "R$ " + total;
