@@ -9,20 +9,15 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    
     <div class="barra-topo">
         <span class="texto-titulo">FoodCamp</span>
         <p>Sua comida em 6 minutos</p>
     </div>
 
     <div class="todos-pedidos">
-        
         <div class="pedidos-container">
-
             <span class="texto-titulo">Primeiro, seu prato</span>
-            
             <div class="pratos-principais">
-
                 <div onclick="pedidoSelecionado(this)" class="opcoes">
                     <img src="imgs/frango_yin_yang.png" alt="Frango Yin Yang">
                     <strong class="nome-pedido">Frango Yin Yang</strong>
@@ -32,7 +27,6 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-
                 <div onclick="pedidoSelecionado(this)" class="opcoes">
                     <img src="imgs/hamburguer.jpg" alt="Hamburguer">
                     <strong class="nome-pedido">Hamburguer</strong>
@@ -42,7 +36,6 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-
                 <div onclick="pedidoSelecionado(this)" class="opcoes">
                     <img src="imgs/yakisoba.jpeg" alt="Yakisoba">
                     <strong class="nome-pedido">Yakisoba</strong>
@@ -52,16 +45,12 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-
             </div>  
         </div>
 
         <div class="pedidos-container">
-
             <span class="texto-titulo">Agora, sua bebida</span>
-            
             <div class="bebidas">
-
                 <div onclick="pedidoSelecionado(this)" class="opcoes">
                     <img src="imgs/coquinha_gelada.png" alt="Coquinha Gelada">
                     <strong class="nome-pedido">Coquinha gelada</strong>
@@ -71,7 +60,6 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-
                 <div onclick="pedidoSelecionado(this)" class="opcoes">
                     <img src="imgs/suco-de-laranja.png" alt="Suco de laranja">
                     <strong class="nome-pedido">Suco fresquinho</strong>
@@ -81,7 +69,6 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-
                 <div onclick="pedidoSelecionado(this)" class="opcoes">
                     <img src="imgs/copo-agua.jpg" alt="Copo com água">
                     <strong class="nome-pedido">Água</strong>
@@ -91,16 +78,12 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-
             </div>  
         </div>
 
         <div class="pedidos-container">
-
             <span class="texto-titulo">Por fim, sua sobremesa</span>
-            
             <div class="sobremesas">
-
                 <div onclick="pedidoSelecionado(this)" class="opcoes">
                     <img src="imgs/pudim.png" alt="Pudim gostoso">
                     <strong class="nome-pedido">Pudim</strong>
@@ -110,7 +93,6 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-
                 <div onclick="pedidoSelecionado(this)" class="opcoes">
                     <img src="imgs/sagu.jpg" alt="Sagu">
                     <strong class="nome-pedido">Sagu</strong>
@@ -120,7 +102,6 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-
                 <div onclick="pedidoSelecionado(this)" class="opcoes">
                     <img src="imgs/bolo-chocolate.jpg" alt="Bolo de chocolate">
                     <strong class="nome-pedido">Bolo de chocolate</strong>
@@ -130,52 +111,38 @@
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-
             </div>  
         </div>
-
     </div>
 
     <div class="barra-inferior">
-
         <div class="botao-desabilitado"><span>Selecione os 3 itens para fechar o pedido</span></div>
         <div class="botao-habilitado none" onclick="menuConfirmar();inserirValores();"><span>Fechar pedido!</span></div>
-
     </div>
-
 
     <div onclick="menuConfirmar()" class="confirmar-fundo confirmar none"></div>
 
     <div class="confirmar-menu confirmar none">
-
         <strong>Confirme seu pedido</strong>
-
         <div class="confirmar-item">
             <span class="confirmar-prato"></span>
             <span class="confirmar-prato-valor"></span>
         </div>
-
         <div class="confirmar-item">
             <span class="confirmar-bebida"></span>
             <span class="confirmar-bebida-valor"></span>
         </div>
-
         <div class="confirmar-item">
             <span class="confirmar-sobremesa"></span>
             <span class="confirmar-sobremesa-valor"></span>
         </div>
-
         <div class="confirmar-item">
            <strong>TOTAL</strong>
            <span class="confirmar-total"></span>
         </div>
-
         <div id="botao-confirmar" onclick="mensagemWhats()"> <strong>Tudo certo, pode pedir!</strong> </div>
         <div id="botao-cancelar" onclick="menuConfirmar()"> <strong>Cancelar</strong> </div>
-
     </div>
-
-    
 
     <script src="scripts/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
