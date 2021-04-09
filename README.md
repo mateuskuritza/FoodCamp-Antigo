@@ -12,7 +12,7 @@ Acesse a página clicando **<a href="https://mateuskuritza.github.io/Projeto3_Fo
 
 ​																									Preview do APP
 
-<img src="C:\Users\mateu\AppData\Roaming\Typora\typora-user-images\image-20210409114637198.png" alt="image-20210409114637198" style="zoom:150%;" />
+<img src="imgs/foodCampImg.png" alt="image-20210409114637198" style="zoom:150%;" />
 
 
 
