@@ -1,13 +1,13 @@
 function pedidoSelecionado(element){
 
-    let remover = "no";
+    let remover = "nao";
     const containerSelecionados = element.parentNode.classList.value;
     const selecionados = document.querySelector("." + containerSelecionados + " .selecionado");
   
     // remover selecionado
-    if(element.classList.value == "opcoes selecionado"){
+    if(element.classList.value === "opcoes selecionado"){
         element.classList.remove("selecionado");
-        remover = "yes";
+        remover = "sim";
         desabilitarConfirmar();
     };
 
@@ -18,13 +18,13 @@ function pedidoSelecionado(element){
 
 
     // adicionar estilo de selecionado
-    if(remover == "no"){
+    if(remover === "nao"){
         element.classList.add("selecionado");
     }
 
 
     //ativar botao inferior e obter valores com 3 opcoes selecionadas
-    if(document.querySelectorAll(".selecionado").length == 3){
+    if(document.querySelectorAll(".selecionado").length === 3){
         obterValores();
         habilitarConfirmar();
     }
@@ -66,7 +66,7 @@ function mensagemWhats(){
     const nomeCliente = prompt("Qual seu nome?");
     const enderecoCliente = prompt("Qual seu endereço?");
 
-    if(nomeCliente.length!=0 && enderecoCliente.length!=0){
+    if(nomeCliente !== null && enderecoCliente !== null){
         const linkWhats = "https://api.whatsapp.com/send?phone=5542998043116&text="+encodeURIComponent("Olá, gostaria de fazer o pedido:\n-Prato: " + pratosPedidos[0] + "\n-Bebida: " + pratosPedidos[1] + "\n-Sobremesa: " + pratosPedidos[2] + "\n*Total:* R$" + total + "\n*Nome:* " + nomeCliente + "\n*Endereço:* " + enderecoCliente);
         window.open(linkWhats);
     } else {
