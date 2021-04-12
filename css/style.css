@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
+.dark-theme{
+    --text-color: #E5E5E5;
+    --background-color: #333333;
+}
+
+:root{
+    --text-color: #333333;
+    --background-color: #E5E5E5;
+}
+
 ion-icon{
     display: none;
     width: 15.44px;
@@ -8,13 +18,13 @@ ion-icon{
 }
 
 .texto-titulo{
-    font-family: 'Righteous', cursive;
+    font-family: 'Righteous', sans-serif;
     font-weight: bold;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
-    background: #E5E5E5;
+    background: var(--background-color);
 }
 
 .barra-topo {
@@ -43,7 +53,7 @@ body{
 .todos-pedidos{
     padding-left: 19px;
     width: 100%;
-    background: #E5E5E5;
+    background: var(--background-color);
     margin-top: 48px;
     margin-bottom: 118px;
     display: flex;
@@ -59,7 +69,7 @@ body{
 
 .pedidos-container > span{
     font-size: 26px;
-    color: #333333;
+    color: var(--text-color);
 }
 
 .opcoes{
@@ -113,7 +123,7 @@ body{
     bottom: 0;
     height: 92px;
     width: 100%;
-    background: #FFFFFF;
+    background: var(--background-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +141,7 @@ body{
 }
 
 .botao-desabilitado span{
-    color: #FFFFFF;
+    color: var(--background-color);
     font-size: 20px;
     text-align: center;
 }
@@ -156,7 +166,7 @@ body{
 }
 
 .botao-habilitado span{
-    color: #FFFFFF;
+    color: var(--background-color);
     font-size: 20px;
     text-align: center;
     font-style: bold;
@@ -164,7 +174,7 @@ body{
 
 .confirmar-menu{
     background: #50D074;
-    color: #FFFFFF;
+    color: var(--background-color);
     border-radius: 9px;
     position: fixed;
     width: 90%;

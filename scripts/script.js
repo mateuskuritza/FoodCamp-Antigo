@@ -1,3 +1,13 @@
+const botaoTema = document.querySelector(".alterar-tema");
+const opcoes = [".pratos-principais", ".bebidas", ".sobremesas"];
+const botaoHabilitado = document.querySelector(".botao-habilitado");
+const botaoDesabilitado = document.querySelector(".botao-desabilitado");
+
+function alterarTema(){
+    const tudo = document.querySelector("body");
+    tudo.classList.toggle("dark-theme");
+}
+
 function pedidoSelecionado(element){
 
     let remover = "nao";
@@ -34,7 +44,6 @@ function obterValores(){
 
     valores = [];
     pratosPedidos = [];
-    const opcoes = [".pratos-principais", ".bebidas", ".sobremesas"];
 
     for(let i=0; i<opcoes.length;i++){
         valores[i] = document.querySelector(opcoes[i] + " .selecionado .valor-pedido");
@@ -46,9 +55,6 @@ function obterValores(){
 }
 
 function habilitarConfirmar(){
-
-    botaoHabilitado = document.querySelector(".botao-habilitado");
-    botaoDesabilitado = document.querySelector(".botao-desabilitado");
     botaoHabilitado.classList.remove("none");
     botaoDesabilitado.classList.add("none");
 }
