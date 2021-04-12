@@ -1,4 +1,4 @@
-const botaoTema = document.querySelector(".alterar-tema");
+const botaoTema = document.querySelectorAll(".alterar-tema");
 const opcoes = [".pratos-principais", ".bebidas", ".sobremesas"];
 const botaoHabilitado = document.querySelector(".botao-habilitado");
 const botaoDesabilitado = document.querySelector(".botao-desabilitado");
@@ -6,6 +6,9 @@ const botaoDesabilitado = document.querySelector(".botao-desabilitado");
 function alterarTema(){
     const tudo = document.querySelector("body");
     tudo.classList.toggle("dark-theme");
+
+    botaoTema[0].classList.toggle("none");
+    botaoTema[1].classList.toggle("none");
 }
 
 function pedidoSelecionado(element){

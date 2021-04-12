@@ -10,9 +10,14 @@
 </head>
 <body>
     <div class="barra-topo">
-        <span class="texto-titulo">FoodCamp</span>
-        <p>Sua comida em 6 minutos</p>
-        <button class="alterar-tema" onclick="alterarTema();">Alterar tema</button>
+        <div>
+            <span class="texto-titulo">FoodCamp</span>
+            <p>Sua comida em 6 minutos</p>
+        </div>
+        <div>
+            <ion-icon class="alterar-tema" onclick="alterarTema();" name="moon"></ion-icon>
+            <ion-icon class="alterar-tema none" onclick="alterarTema();" name="sunny"></ion-icon>
+        </div>
     </div>
 
     <div class="todos-pedidos">
