@@ -4,7 +4,6 @@
 
 > Página desenvolvida utilizando **CSS**, **HTML** e **JavaScript**. 
 
-> O projeto faz parte do bootcamp "Desenvolvimento Web Full-Stack" do **Responde Aí**
 
 
 
